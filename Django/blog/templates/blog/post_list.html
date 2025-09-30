@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">Blog Django</a></h1>
+    </header>
+
+    {% for post in posts %}
+    <article><h2>
+        <a href="">{{ post.title }}</a></h2>
+        <time>Fecha de publicación: {{ post.published_date }}</time>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+
+    {% endfor %}
+
+</body>
+
+</html>
